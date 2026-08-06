@@ -2,19 +2,19 @@
 
 ## Project Overview
 
-Retail Business Performance Intelligence is a business intelligence project built using the **Online Retail II** dataset to analyze sales performance, customer purchasing behaviour, product performance, and revenue trends.
+**Retail Business Performance Intelligence** is a business intelligence project built using the **Online Retail II** dataset to analyze sales performance, customer purchasing behaviour, product performance, and revenue trends.
 
-This project extends the **Retail Customer Behavior Analysis** SQL project. The SQL phase focused on preparing the data through profiling, cleaning, customer analysis, RFM segmentation, and the development of a reporting layer in Snowflake. Building on that foundation, Power BI was used to transform the analytical outputs into an interactive dashboard that enables business users to monitor business performance and explore insights through dynamic visualizations.
+This project extends the **Retail Customer Behavior Analysis** SQL project. The SQL phase focused on preparing the data through profiling, cleaning, customer behaviour analysis, RFM segmentation, and the development of a reporting layer in Snowflake. Building on that foundation, Power BI was used to transform the analytical outputs into an interactive dashboard that enables business users to monitor business performance and explore insights through dynamic visualizations.
 
 The dashboard combines Snowflake SQL for data preparation with Power BI for reporting, providing a practical solution for analyzing retail business performance from multiple perspectives.
 
 ---
 
-## Business Problem
+# Business Problem
 
-Retail businesses generate large amounts of transactional data every day, but raw data alone does not provide meaningful business information.
+Retail businesses generate large volumes of transactional data every day, but raw transaction data alone does not provide meaningful business information.
 
-Business users need a reporting solution that helps them answer important questions such as:
+Business users need answers to questions such as:
 
 - How is the business performing overall?
 - Which customers generate the highest revenue?
@@ -26,9 +26,9 @@ This project addresses these challenges by converting retail transaction data in
 
 ---
 
-## Project Objectives
+# Project Objectives
 
-- Build an interactive business performance dashboard using Power BI.
+- Build an interactive retail business performance dashboard using Power BI.
 - Reuse the reporting layer created in Snowflake SQL.
 - Monitor executive sales KPIs.
 - Analyze customer purchasing behaviour.
@@ -39,8 +39,9 @@ This project addresses these challenges by converting retail transaction data in
 
 ---
 
-## Project Workflow
+# Project Workflow
 
+```
 Online Retail II Dataset
         │
         ▼
@@ -71,13 +72,13 @@ Business Insights & Recommendations
 
 ---
 
-## Dashboard Pages
+# Dashboard Pages
 
-### 1. Executive Overview
+## 1. Executive Overview
 
 Provides a high-level summary of overall business performance.
 
-**Key Metrics**
+### Key Metrics
 
 - Total Sales
 - Total Orders
@@ -87,11 +88,11 @@ Provides a high-level summary of overall business performance.
 
 ---
 
-### 2. Customer Intelligence
+## 2. Customer Intelligence
 
 Analyzes customer purchasing behaviour and customer loyalty.
 
-**Key Analysis**
+### Key Analysis
 
 - Repeat Customers
 - One-Time Customers
@@ -102,11 +103,11 @@ Analyzes customer purchasing behaviour and customer loyalty.
 
 ---
 
-### 3. Customer Segmentation
+## 3. Customer Segmentation
 
 Visualizes customer segments generated through SQL-based RFM analysis.
 
-**Customer Segments**
+### Customer Segments
 
 - Champions
 - Loyal Customers
@@ -117,27 +118,41 @@ Visualizes customer segments generated through SQL-based RFM analysis.
 
 ---
 
-### 4. Product Intelligence
+## 4. Product Intelligence
 
-Evaluates product performance using revenue, orders, and quantity sold.
+Evaluates product performance by analyzing revenue contribution, order volume, and sales quantity to identify the products that contribute the most to overall business performance.
 
----
+### Key Analysis
 
-### 5. Time Intelligence
-
-Analyzes business performance over time using monthly and quarterly revenue trends.
-
----
-
-### 6. Business Insights & Recommendations
-
-Summarizes the key findings from the analysis and provides recommendations to support business decisions.
+- Top Products by Revenue
+- Top Products by Orders
+- Top Products by Quantity Sold
+- Product Contribution to Total Sales
 
 ---
 
-## Business Questions Answered
+## 5. Time Intelligence
 
-This dashboard helps answer the following business questions:
+Analyzes sales performance across different time periods to understand revenue trends and business growth over time.
+
+### Key Analysis
+
+- Monthly Sales Trend
+- Quarterly Revenue Trend
+- Revenue Growth Analysis
+- Sales Performance Over Time
+
+---
+
+## 6. Business Insights & Recommendations
+
+Summarizes the key findings from the analysis and provides recommendations to support business decision-making.
+
+---
+
+# Business Questions Answered
+
+The dashboard helps answer the following business questions:
 
 - How is the business performing overall?
 - Which customers contribute the highest revenue?
@@ -146,20 +161,20 @@ This dashboard helps answer the following business questions:
 - Which products generate the highest revenue?
 - Which products are ordered most frequently?
 - How does revenue change over time?
-- Which countries contribute the highest sales?
+- How does business performance vary across different countries?
 
 ---
 
-## Technologies Used
+# Technologies Used
 
-### Data Preparation
+## Data Preparation
 
 - Snowflake SQL
 - Reporting Layer
 - Star Schema
 - Fact & Dimension Views
 
-### Business Intelligence
+## Business Intelligence
 
 - Microsoft Power BI
 - Power Query
@@ -167,21 +182,22 @@ This dashboard helps answer the following business questions:
 
 ---
 
-## Repository Structure
+# Repository Structure
 
-
+```
 Retail_Business_Performance_Intelligence
-
- 01_Data
- 02_SQL
- 03_PowerBI
- 04_Documentation
- 05_Outputs
- README.md
+│
+├── README.md
+├── 01_Data
+├── 02_SQL
+├── 03_PowerBI
+├── 04_Documentation
+└── 05_Outputs
+```
 
 ---
 
-## Key Features
+# Key Features
 
 - SQL reporting layer built in Snowflake
 - Star schema data model
@@ -195,15 +211,16 @@ Retail_Business_Performance_Intelligence
 
 ---
 
-## Dashboard Preview
+# Dashboard Preview
 
-*(Insert Dashboard_Preview/Executive_Overview.png here)*
-
----
-
-## Business Value
-
-The dashboard provides a single reporting solution for analyzing retail business performance. By combining SQL-based analysis with interactive Power BI reporting, it enables business users to monitor sales performance, understand customer behaviour, evaluate product performance, identify revenue trends, and make informed business decisions using data.
+![Executive Overview](05_Outputs/Dashboard_Preview/Executive_Overview.png)
 
 ---
 
+# Business Value
+
+The dashboard transforms raw retail transaction data into meaningful business information that is easy to explore and understand.
+
+Instead of manually analyzing thousands of transaction records, business users can quickly monitor sales performance, understand customer purchasing behaviour, evaluate product performance, identify valuable customer segments, and track revenue trends through a single interactive reporting solution.
+
+By combining **Snowflake SQL** for data preparation and **Power BI** for visualization, the project delivers a structured business intelligence solution that supports data-driven decision-making and can be extended for future reporting requirements.
