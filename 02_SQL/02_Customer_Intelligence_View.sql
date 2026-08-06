@@ -1,0 +1,22 @@
+-- =========================================
+-- CUSTOMER INTELLIGENCE VIEW
+-- =========================================
+
+CREATE OR REPLACE VIEW VW_CUSTOMER_INTELLIGENCE AS
+SELECT
+        CUSTOMER_ID,
+    COUNT(DISTINCT INVOICE) AS TOTAL_ORDERS,
+    ROUND(SUM(SALES_AMOUNT),2) AS TOTAL_SALES,
+    SUM(QUANTITY) AS TOTAL_QUANTITY,
+    ROUND(
+        SUM(SALES_AMOUNT) / COUNT(DISTINCT INVOICE),
+        2
+    ) AS AVG_ORDER_VALUE,
+    CASE
+        WHEN COUNT(DISTINCT INVOICE) = 1
+            THEN 'One-Time Customer'
+        ELSE 'Repeat Customer'
+    END AS CUSTOMER_TYPE
+FROM VW_FACT_SALES
+GROUP BY
+        CUSTOMER_ID;
