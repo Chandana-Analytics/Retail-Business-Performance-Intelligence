@@ -213,7 +213,7 @@ Retail_Business_Performance_Intelligence
 
 # Dashboard Preview
 
-![Executive Overview](05_Outputs/Dashboard_Preview/Executive_Overview.png)
+![Executive Overview](05_Outputs/01_Dashboard_Preview/001_Executive_Overview.png)
 
 ---
 
